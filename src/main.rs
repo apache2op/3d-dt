@@ -4,7 +4,7 @@ fn main() {
         .insert_resource(ClearColor(Color::rgb(1.0, 1.0, 0.5)))
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             window: WindowDescriptor {
-                title: "new app".to_string(),
+                title: "3d-dt".to_string(),
                 ..Default::default()
             },
             add_primary_window: true,
@@ -13,7 +13,7 @@ fn main() {
         }))
         .add_startup_system(spawn_camera)
         .run();
-    println!("Hello, world!");
+    println!("Hello, world");
 }
 fn spawn_camera(mut commands: Commands) {
     commands.spawn(Camera3dBundle {
